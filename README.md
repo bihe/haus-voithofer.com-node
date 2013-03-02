@@ -1,4 +1,4 @@
-haus-voithofer.com-Azure
+haus-voithofer.com-node
 ========================
 
-Azure enabled relaunch of the haus-voithofer.com Homepage
+Node.js enabled relaunch of the haus-voithofer.com Homepage
