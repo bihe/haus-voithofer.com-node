@@ -15,4 +15,8 @@ call uglifyjs.cmd build\js\bootstrap.js -o bootstrap-build\js\bootstrap.min.js
 
 echo compiled all
 
+copy /Y bootstrap-build\img\*.* nodeapp\public\images
+copy /Y bootstrap-build\css\*.* nodeapp\public\stylesheets
+copy /Y bootstrap-build\js\*.* nodeapp\public\javascripts
+
 pause

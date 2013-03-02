@@ -1,0 +1,101 @@
+doctype 5
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='Henrik Binggl')
+    link(rel='stylesheet', href='./stylesheets/index.css')
+
+    // HTML5 shim, for IE6-8 support of HTML5 elements
+    | <!--[if lt IE 9]>  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  <![endif]-->
+
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='./images/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='./images/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='./images/apple-touch-icon-57-precomposed.png')
+    link(rel='shortcut icon', href='./images/favicon.png')
+  body
+
+    // NAVBAR
+    // ==================================================
+    div(class='navbar-wrapper')
+      // Wrap the .navbar in .container to center it within the absolutely positioned parent.
+      div(class='container')
+        div(class='navbar navbar-inverse')
+          div(class='navbar-inner')
+            
+            // Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
+            
+            a(class='btn btn-navbar', data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            
+
+            //a(class='brand', href='#')
+            //  | Haus Voithofer
+            
+            // Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+            
+            div.nav-collapse.collapse
+              ul.nav
+                li 
+                  a(href='/') Haus Voithofer
+                li
+                  a(href='/rooms') Rooms
+                li
+                  a(href='#contact') Contact
+
+                // Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns
+
+                li.dropdown
+                  a(href='#', class='dropdown-toggle', data-toggle='dropdown')
+                    | Dropdown 
+                    b.caret
+                  ul.dropdown-menu  
+                    li
+                      a(href='#') Action
+                    li
+                      a(href='#') Another action
+                    li.divider
+                    li.nav-header Nav header
+                    li
+                      a(href='#') Separated link
+                    li
+                      a(href='#') One more separated link
+         
+              ul.nav.pull-right
+                li
+                  a(href='#') DE | EN
+        
+
+    div#headerimage.carousel
+      div.carousel-inner
+        div.item.active
+          img(src='./images/panorama2_gross.jpg', alt='Neukirchen am Gro&szlig;venediger')
+          div.container
+            div.carousel-caption
+              h1 Haus Voithofer
+              p.lead Neukirchen am Gro&szlig;venediger
+
+   
+    div.container
+     
+      block content
+          
+      hr 
+
+      footer
+        p &copy; Haus-Voithofer 2013
+
+
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(src='./javascripts/bootstrap.js')
+    script
+      !function ($) {
+        $(function(){
+         
+        })
+      }(window.jQuery);
