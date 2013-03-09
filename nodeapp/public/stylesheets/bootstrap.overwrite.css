@@ -101,9 +101,13 @@
 }
 
 li.small {
-  width: 90px;
+  width: 100px;
 }
 
 li.small > a {
   padding: 12px 2px 15px 12px !important;
+}
+
+.center {
+  text-align: center;
 }

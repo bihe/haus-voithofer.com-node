@@ -16,9 +16,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"to",
+				"Toggle Comment"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
 			[
 				"com",
 				"Toggle Comment"
@@ -64,7 +72,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 536.0
+		"width": 440.0
 	},
 	"console":
 	{
@@ -81,6 +89,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/public/javascripts/lazyload.min.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/views/index.jade",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/i18n/en-US.json",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/routes/user.js",
@@ -110,6 +119,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Room Teaser",
+			"src",
+			"span2",
 			"indent",
 			"../bootstrap-build/ico",
 			"bootstrap-build/ico",

@@ -10,14 +10,14 @@ block content
         li.active #{lingua.Rooms}
 
   div.row
-      div.span9
+      div.span8
         h2
           | #{lingua.Rooms}
 
         hr
 
         div.row
-          div.span7
+          div.span6
             p #{lingua.RoomsIntro}
             p 
               | #{lingua.ImagesInGallery} &nbsp;
@@ -25,7 +25,7 @@ block content
                 | &raquo; #{lingua.Gallery}
 
           div.span2.pull-right
-            img.img-rounded(src='./images/room_teaser.gif',alt='Room Teaser')
+            img.img-rounded(data-src='./images/room_teaser.gif',alt='Room Teaser', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
 
         br
 
@@ -41,65 +41,107 @@ block content
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Aufenthaltsraum mit TV
+                | #{lingua.Option1}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Terasse
+                | #{lingua.Option2}
             tr
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Frühstücksraum
+                | #{lingua.Option3}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Ganzjährig geöffnet
+                | #{lingua.Option4}
             tr
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Gästekühlschrank
+                | #{lingua.Option5}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Haustiere erlaubt
+                | #{lingua.Option6}
             tr
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Gitterbett
+                | #{lingua.Option7}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Kinderhochstuhl
+                | #{lingua.Option8}
             tr
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Zentrale Lage
+                | #{lingua.Option9}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Skilifte Entfernung &lt; 1000 m
+                | #{lingua.Option10}
             tr
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Frühstück inkl.
+                | #{lingua.Option11}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | Barzahlung
+                | #{lingua.Option12}
 
-      div.span3
-        p
-          h3 Links
-          hr
-          ul
-            li
-              a(href='http://www.neukirchen.at/', target='_BLANK') Neukirchen am Großvenediger
-            li
-              a(href='http://www.hohetauern.at/', target='_BLANK') Nationalpark Hohe Tauern
-            li
-              a(href='http://www.skischule-neukirchen.at/', target="_BLANK") Skischule Neukirchen
+        br
+
+
+        h3 Links
+        hr
+        ul
+          li
+            a(href='http://www.neukirchen.at/', target='_BLANK') Neukirchen am Großvenediger
+          li
+            a(href='http://www.hohetauern.at/', target='_BLANK') Nationalpark Hohe Tauern
+          li
+            a(href='http://www.skischule-neukirchen.at/', target="_BLANK") Skischule Neukirchen
+
+
+      div.span4
+        
+        h3 #{lingua.Prices}
+        hr
+        p 
+          | #{lingua.PriceFlatText} 
+        p.center
+          button.btn.btn-large.btn-success
+            &euro; 25,-- #{lingua.PricePerPersonNight}
+
+        br
+
+        h3 #{lingua.Gallery}
+        hr
+        div.row
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4466389853', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4023/4466389853_00b82556bc_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4467163900', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4012/4467163900_4547e2c6b4_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+        br
+        div.row
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4466389585', target='_BLANK')
+              img.img-rounded(data-src='http://farm3.static.flickr.com/2697/4466389585_c5309e0170_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4467163576', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4022/4467163576_80468b486e_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+        br
+        div.row
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4467163510', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4015/4467163510_560fafac38_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4466389267', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4044/4466389267_0a67343ebd_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+
+        
