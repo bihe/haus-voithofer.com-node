@@ -42,33 +42,25 @@ html(lang='en')
             div.nav-collapse.collapse
               ul.nav
                 li 
-                  a(href='/') Haus Voithofer
+                  a(href='/') #{lingua.Title}
                 li
-                  a(href='/rooms') Rooms
+                  a(href='/rooms') #{lingua.Rooms}
                 li
-                  a(href='#contact') Contact
+                  a(href='/flat') #{lingua.Flat}
+                li
+                  a(href='/location') #{lingua.Location}
+                li
+                  a(href='#contact') #{lingua.Contact}
 
-                // Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns
-
-                li.dropdown
-                  a(href='#', class='dropdown-toggle', data-toggle='dropdown')
-                    | Dropdown 
-                    b.caret
-                  ul.dropdown-menu  
-                    li
-                      a(href='#') Action
-                    li
-                      a(href='#') Another action
-                    li.divider
-                    li.nav-header Nav header
-                    li
-                      a(href='#') Separated link
-                    li
-                      a(href='#') One more separated link
-         
               ul.nav.pull-right
-                li
-                  a(href='#') DE | EN
+                li.small
+                   a(href='?l=de-AT') 
+                    span #{lingua.DE}&nbsp;
+                    img(src='./images/de.png',alt='switch language de-AT')
+                li.small
+                  a(href='?l=en-US')
+                    span #{lingua.EN}&nbsp;
+                    img(src='./images/en.png',alt='switch language en-US')
         
 
     div#headerimage.carousel

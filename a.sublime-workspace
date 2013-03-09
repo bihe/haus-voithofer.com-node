@@ -16,9 +16,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 265.0,
+		"height": 242.0,
 		"selected_items":
 		[
+			[
+				"com",
+				"Toggle Comment"
+			],
 			[
 				"space",
 				"Indentation: Convert to Spaces"
@@ -60,7 +64,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 440.0
+		"width": 536.0
 	},
 	"console":
 	{
@@ -77,6 +81,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/views/index.jade",
+		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/i18n/en-US.json",
+		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/routes/user.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/design/index.html",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/app.js",
 		"/C/Users/henrik/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",

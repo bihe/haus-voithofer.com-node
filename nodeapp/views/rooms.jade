@@ -2,31 +2,104 @@ extends layout
 
 block content
 
- ul.breadcrumb
+  ul.breadcrumb
         li
           a(href='/') Home
           span.divider /
        
-        li.active Rooms
-
- div.page-header
-    h1 
-      | Example page header 
-      small Subtext for header
+        li.active #{lingua.Rooms}
 
   div.row
-        div.span4
-          h2 Heading
-          p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-          p
-            a.btn(href='#') View details &raquo;
-        div.span4
-          h2 Heading
-          p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-          p
-            a.btn(href='#') View details &raquo;  
-        div.span4
-          h2 Heading
-          p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. 
-          p
-            a.btn(href='#') View details &raquo;
+      div.span9
+        h2
+          | #{lingua.Rooms}
+
+        hr
+
+        div.row
+          div.span7
+            p #{lingua.RoomsIntro}
+            p 
+              | #{lingua.ImagesInGallery} &nbsp;
+              a(href='http://www.flickr.com/photos/haus-voithofer/sets/72157623588513057/show/', target='_BLANK')
+                | &raquo; #{lingua.Gallery}
+
+          div.span2.pull-right
+            img.img-rounded(src='./images/room_teaser.gif',alt='Room Teaser')
+
+        br
+
+        table.table.table-condensed.table-striped
+          colgroup
+            col(width='50%')
+            col(width='50%')
+          thead
+            tr
+              th(colspan=2)  #{lingua.BasicOptions}
+          tbody
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Aufenthaltsraum mit TV
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Terasse
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Frühstücksraum
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Ganzjährig geöffnet
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Gästekühlschrank
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Haustiere erlaubt
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Gitterbett
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Kinderhochstuhl
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Zentrale Lage
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Skilifte Entfernung &lt; 1000 m
+            tr
+              td 
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Frühstück inkl.
+              td
+                img(src='./images/active.png', alt='active')
+                &nbsp;
+                | Barzahlung
+
+      div.span3
+        p
+          h3 Links
+          hr
+          ul
+            li
+              a(href='http://www.neukirchen.at/', target='_BLANK') Neukirchen am Großvenediger
+            li
+              a(href='http://www.hohetauern.at/', target='_BLANK') Nationalpark Hohe Tauern
+            li
+              a(href='http://www.skischule-neukirchen.at/', target="_BLANK") Skischule Neukirchen
