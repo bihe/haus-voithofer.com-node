@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+  ul.breadcrumb
+        li
+          a(href='/') Home
+          span.divider /
+       
+        li.active #{lingua.Location}
+
+  div.row
+      div.span8
+        h2
+          | #{lingua.Location}
+
+        hr
+
+        p 
+          | #{lingua.LocationIntro} &nbsp;
+          a(href='http://maps.google.at/maps?f=q&source=s_q&hl=de&geocode=&q=Privatzimmer+Voithofer&sll=47.273745,12.416162&sspn=0.187053,0.445976&ie=UTF8&hq=Privatzimmer+Voithofer&hnear=&t=h&z=12&iwloc=A', target='_BLANK')
+            | &raquo; #{lingua.LocationOpenNewWindows}
+
+        br
+
+        
+        | <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.at/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Privatzimmer+Voithofer&amp;sll=47.273745,12.416162&amp;sspn=0.187053,0.445976&amp;ie=UTF8&amp;hq=Privatzimmer+Voithofer&amp;hnear=&amp;t=h&amp;z=12&amp;iwloc=A&amp;cid=16656487470504958015&amp;ll=47.282024,12.293015&amp;output=embed"></iframe><br /><small><a href="http://maps.google.at/maps?f=q&amp;source=embed&amp;hl=de&amp;geocode=&amp;q=Privatzimmer+Voithofer&amp;sll=47.273745,12.416162&amp;sspn=0.187053,0.445976&amp;ie=UTF8&amp;hq=Privatzimmer+Voithofer&amp;hnear=&amp;t=h&amp;z=12&amp;iwloc=A&amp;cid=16656487470504958015&amp;ll=47.282024,12.293015" style="color:#0000FF;text-align:left">Größere Kartenansicht</a></small>
+
+        
+      div.span4
+        
+        h3 Links
+        hr
+        ul
+          li
+            a(href='http://www.neukirchen.at/', target='_BLANK') Neukirchen am Großvenediger
+          li
+            a(href='http://www.hohetauern.at/', target='_BLANK') Nationalpark Hohe Tauern
+          li
+            a(href='http://www.skischule-neukirchen.at/', target="_BLANK") Skischule Neukirchen

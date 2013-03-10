@@ -1,0 +1,67 @@
+extends layout
+
+block content
+
+  ul.breadcrumb
+        li
+          a(href='/') Home
+          span.divider /
+       
+        li.active #{lingua.Contact}
+
+        
+
+  div.row
+      div.span8
+        h2
+          | #{lingua.Contact}
+
+        hr
+
+        p 
+          | #{lingua.ContactOptions} &nbsp;
+          
+        p
+          strong Haus-Voithofer
+          br
+          | Neudaugasse 243
+          br
+          | 5741 Neukirchen am Großvenediger
+          br
+          | Austria
+
+        table.table.table-condensed.table-striped
+          colgroup
+            col(width='50%')
+            col(width='50%')
+          thead
+            tr
+              th(colspan=2)  #{lingua.ContactIntro}
+          tbody
+            tr
+              td
+                i.icon-user 
+                | &nbsp; #{lingua.Telephone}
+              td
+                | +43 (0)650 9117814
+            tr
+              td 
+                i.icon-envelope 
+                | &nbsp; #{lingua.Email}
+              td 
+                a(href='mailto:info@haus-voithofer.com?subject=Anfrage Haus-Voithofer')
+                  | info@haus-voithofer.com
+        
+        
+        
+      div.span4
+        
+        h3 Links
+        hr
+        ul
+          li
+            a(href='http://www.neukirchen.at/', target='_BLANK') Neukirchen am Großvenediger
+          li
+            a(href='http://www.hohetauern.at/', target='_BLANK') Nationalpark Hohe Tauern
+          li
+            a(href='http://www.skischule-neukirchen.at/', target="_BLANK") Skischule Neukirchen

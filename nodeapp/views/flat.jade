@@ -7,25 +7,28 @@ block content
           a(href='/') Home
           span.divider /
        
-        li.active #{lingua.Rooms}
+        li.active #{lingua.Flat}
+
+        
 
   div.row
       div.span8
         h2
-          | #{lingua.Rooms}
+          | #{lingua.Flat}
 
         hr
 
         div.row
           div.span6
-            p #{lingua.RoomsIntro}
+            p 
+              | #{lingua.FlatIntro}
             p 
               | #{lingua.ImagesInGallery} &nbsp;
-              a(href='http://www.flickr.com/photos/haus-voithofer/sets/72157623588513057/show/', target='_BLANK')
+              a(href='http://www.flickr.com/photos/haus-voithofer/sets/72157623713082920/show/', target='_BLANK')
                 | &raquo; #{lingua.Gallery}
 
           div.span2.pull-right
-            img.img-rounded(data-src='./images/room_teaser.gif',alt='Room Teaser', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+            img.img-rounded(data-src='./images/flat_teaser.gif',alt='Flat Teaser', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
 
         br
 
@@ -86,7 +89,7 @@ block content
               td 
                 img(src='./images/active.png', alt='active')
                 &nbsp;
-                | #{lingua.Option11}
+                | #{lingua.Option11_Flat}
               td
                 img(src='./images/active.png', alt='active')
                 &nbsp;
@@ -111,10 +114,15 @@ block content
         h3 #{lingua.Prices}
         hr
         p 
-          | #{lingua.PriceRoomText} 
+          | #{lingua.PriceFlatText} 
         p.center
           button.btn.btn-large.btn-success
-            &euro; 25,-- #{lingua.PricePerPersonNight}
+            &euro; 80,-- #{lingua.PricePerNight}
+        p
+          | #{lingua.FlatBreakfastOption}
+        p.center
+          button.btn.btn-info
+            &euro; 25,-- #{lingua.PricePerPerson}
 
         br
 
@@ -122,26 +130,26 @@ block content
         hr
         div.row
           div.span2.center
-            a(href='http://flickr.com/photos/48747644@N07/4466389853', target='_BLANK')
-              img.img-rounded(data-src='http://farm5.static.flickr.com/4023/4466389853_00b82556bc_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+            a(href='http://flickr.com/photos/48747644@N07/4467173976', target='_BLANK')
+              img.img-rounded(data-src='http://farm3.static.flickr.com/2765/4467173976_f0db0720f7_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4467173850', target='_BLANK')
+              img.img-rounded(data-src='http://farm3.static.flickr.com/2744/4467173850_1ae573f8a6_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+        br
+        div.row
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/467173702', target='_BLANK')
+              img.img-rounded(data-src='http://farm5.static.flickr.com/4034/4467173702_2695e2462a_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4466399471', target='_BLANK')
+              img.img-rounded(data-src='http://farm3.static.flickr.com/2689/4466399471_5176c21b5f_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
+        br
+        div.row
+          div.span2.center
+            a(href='http://flickr.com/photos/48747644@N07/4466399421', target='_BLANK')
+              img.img-rounded(data-src='http://farm3.static.flickr.com/2791/4466399421_4ba0cc3072_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
           div.span2.center
             a(href='http://flickr.com/photos/48747644@N07/4467163900', target='_BLANK')
               img.img-rounded(data-src='http://farm5.static.flickr.com/4012/4467163900_4547e2c6b4_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
-        br
-        div.row
-          div.span2.center
-            a(href='http://flickr.com/photos/48747644@N07/4466389585', target='_BLANK')
-              img.img-rounded(data-src='http://farm3.static.flickr.com/2697/4466389585_c5309e0170_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
-          div.span2.center
-            a(href='http://flickr.com/photos/48747644@N07/4467163576', target='_BLANK')
-              img.img-rounded(data-src='http://farm5.static.flickr.com/4022/4467163576_80468b486e_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
-        br
-        div.row
-          div.span2.center
-            a(href='http://flickr.com/photos/48747644@N07/4467163510', target='_BLANK')
-              img.img-rounded(data-src='http://farm5.static.flickr.com/4015/4467163510_560fafac38_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
-          div.span2.center
-            a(href='http://flickr.com/photos/48747644@N07/4466389267', target='_BLANK')
-              img.img-rounded(data-src='http://farm5.static.flickr.com/4044/4466389267_0a67343ebd_t.jpg',alt='Gallery', src='data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==', onload='lzld(this)', onerror='lzld(this)')
 
         
