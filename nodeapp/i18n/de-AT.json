@@ -40,5 +40,9 @@
     "ContactIntro": "Sie können uns per Telefon oder Email kontaktieren:",
     "Telephone": "Telefon",
     "Email": "Email",
-    "ContactOptions": "Wie Sie uns erreichen können"
+    "ContactOptions": "Wie Sie uns erreichen können",
+    "Address": "Adresse",
+    "Message": "Nachricht",
+    "Submit": "Absenden",
+    "CaptchaMessage": "Geben Sie die Wörter ein"
 }

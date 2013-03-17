@@ -18,18 +18,6 @@ block content
 
         hr
 
-        p 
-          | #{lingua.ContactOptions} &nbsp;
-          
-        p
-          strong Haus-Voithofer
-          br
-          | Neudaugasse 243
-          br
-          | 5741 Neukirchen am Großvenediger
-          br
-          | Austria
-
         table.table.table-condensed.table-striped
           colgroup
             col(width='50%')
@@ -51,8 +39,52 @@ block content
               td 
                 a(href='mailto:info@haus-voithofer.com?subject=Anfrage Haus-Voithofer')
                   | info@haus-voithofer.com
+
+        script(type="text/javascript")
+         var RecaptchaOptions = {
+            theme : 'clean'
+         };
+
+        form
+          fieldset
+            legend Senden Sie uns eine Nachricht
+            label.strong Name
+            input.span4(type="text", name="name", placeholder="Name…", id="name")
+            label.strong Email
+            input.span4(type="email", name="email", placeholder="Email...", id="email")
+            label.strong #{lingua.Message}
+            textarea.span8(rows="5", name="message", id="message")
+
+            span 
+              strong #{lingua.CaptchaMessage}
+            | <script type="text/javascript"
+            |    src="http://www.google.com/recaptcha/api/challenge?k=6LdpcN4SAAAAACX62A9xsZPZ_Jbrdx1aD9Q1Dy7Z">
+            | </script>
+            | <noscript>
+            |    <iframe src="http://www.google.com/recaptcha/api/noscript?k=your_public_key"
+            |        height="300" width="500" frameborder="0"></iframe><br>
+            |    <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+            |    </textarea>
+            |    <input type="hidden" name="recaptcha_response_field"
+            |        value="manual_challenge">
+            | </noscript>
+
+            br
+            .control-group
+              .controls
+                button.btn.btn-success(type="button") #{lingua.Submit}
         
-        
+        hr
+
+        h4 #{lingua.Address} 
+        p
+          strong Haus-Voithofer
+          br
+          | Neudaugasse 243
+          br
+          | 5741 Neukirchen am Großvenediger
+          br
+          | Austria
         
       div.span4
         

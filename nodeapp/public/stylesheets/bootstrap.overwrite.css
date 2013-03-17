@@ -111,3 +111,7 @@ li.small > a {
 .center {
   text-align: center;
 }
+
+label.strong {
+  font-weight:bold;
+}
