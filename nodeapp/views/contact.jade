@@ -48,12 +48,22 @@ block content
         form
           fieldset
             legend Senden Sie uns eine Nachricht
+
+            div#contactSuccess.alert.alert-success.hide
+              h4 #{lingua.Success}!
+              | #{lingua.ContactDataSent}
+
+            div#contactError.alert.alert-error.hide
+              h4 #{lingua.Error}!
+              | #{lingua.notificationError}
+              span#detailError
+
             label.strong Name
-            input.span4(type="text", name="name", placeholder="Name…", id="name")
+            input.span4(type="text", name="name", placeholder="Name…", id="name", required)
             label.strong Email
-            input.span4(type="email", name="email", placeholder="Email...", id="email")
+            input.span4(type="email", name="email", placeholder="Email...", id="email", required)
             label.strong #{lingua.Message}
-            textarea.span8(rows="5", name="message", id="message")
+            textarea.span8(rows="5", name="message", id="message", required)
 
             span 
               strong #{lingua.CaptchaMessage}
@@ -72,7 +82,7 @@ block content
             br
             .control-group
               .controls
-                button.btn.btn-success(type="button") #{lingua.Submit}
+                button#submitContact.btn.btn-success(type="button") #{lingua.Submit}
         
         hr
 

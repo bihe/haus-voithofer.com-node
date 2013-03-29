@@ -16,19 +16,19 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 104.0,
 		"selected_items":
 		[
-			[
-				"to",
-				"Toggle Comment"
-			],
 			[
 				"comm",
 				"Toggle Comment"
 			],
 			[
 				"com",
+				"Toggle Comment"
+			],
+			[
+				"to",
 				"Toggle Comment"
 			],
 			[
@@ -72,7 +72,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 440.0
+		"width": 536.0
 	},
 	"console":
 	{
@@ -89,7 +89,13 @@
 	},
 	"file_history":
 	[
+		"/E/Development/haus-voithofer.com-node/nodeapp/i18n/de-AT.json",
+		"/E/Development/haus-voithofer.com-node/nodeapp/package.json",
+		"/E/Development/haus-voithofer.com-node/nodeapp/config/application.js",
 		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/bootstrap.overwrite.css",
+		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/styles.css",
+		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/index.css",
+		"/E/Development/haus-voithofer.com-node/nodeapp/public/javascripts/main.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/public/javascripts/lazyload.min.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/views/index.jade",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/i18n/en-US.json",
@@ -120,6 +126,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"=",
+			"notification",
+			"url",
 			"Room Teaser",
 			"src",
 			"span2",

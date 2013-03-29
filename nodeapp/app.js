@@ -5,6 +5,7 @@
 
 var express = require('express'), 
   routes = require('./routes'),
+  appLogic = require('./routes/appLogic'),
   http = require('http'),
   lingua = require('lingua'),
   path = require('path');
@@ -40,11 +41,15 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+// simple routes, just display the pages
 app.get('/', routes.index);
 app.get('/rooms', routes.rooms);
 app.get('/flat', routes.flat);
 app.get('/location', routes.location);
 app.get('/contact', routes.contact);
+
+// app logic
+app.post('/contact', appLogic.contact);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
