@@ -11,11 +11,7 @@ html(lang='en')
     // HTML5 shim, for IE6-8 support of HTML5 elements
     | <!--[if lt IE 9]>  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  <![endif]-->
 
-    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/apple-touch-icon-144-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='./images/apple-touch-icon-114-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='./images/apple-touch-icon-72-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', href='./images/apple-touch-icon-57-precomposed.png')
-    link(rel='shortcut icon', href='./images/favicon.png')
+    link(rel='shortcut icon', href='./images/favicon.ico')
 
     script(src='./javascripts/lazyload.min.js')
   body
@@ -81,6 +77,8 @@ html(lang='en')
           
       hr 
 
+      div#socialshareprivacy.pull-right
+
       footer
         p &copy; Haus-Voithofer 2013
 
@@ -95,3 +93,38 @@ html(lang='en')
       };
     script(src='./javascripts/main.js')
     script(src='./javascripts/hvapp.js')
+    script(src='./javascripts/jquery.socialshareprivacy.min.js')
+    script
+      jQuery(document).ready(function($){
+        if($('#socialshareprivacy').length > 0){
+          $('#socialshareprivacy').socialSharePrivacy({
+            services : {
+              facebook : {
+                'status' : 'on',
+                'perma_option': 'off',
+                'dummy_img': './images/dummy_facebook_en.png',
+                'txt_info': '#{lingua.socialFacebook}',
+                'language': 'en_US'
+              }, 
+              twitter : {
+                'status' : 'on',
+                'perma_option': 'off',
+                'dummy_img': './images/dummy_twitter.png',
+                'txt_info': '#{lingua.socialTwitter}',
+                'language': 'en'
+              },
+              gplus : {
+                'status' : 'on',
+                'perma_option': 'off',
+                'dummy_img': './images/dummy_gplus.png',
+                'txt_info': '#{lingua.socialGplus}',
+                'language': 'en'
+              }
+            },
+            'cookie_domain': 'www.haus-voithofer.com',
+            'css_path': './stylesheets/socialshareprivacy.css'
+          });
+ 
+          $('.settings_info').addClass('hide');
+        }
+      });

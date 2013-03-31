@@ -1,17 +1,28 @@
 /*
- * central place for application logic
- * more or less the service layer of the application
+ * contact controller displays the form and accepts contact request data
+ * contact.js created by Henrik Binggl
  */
 
 var Recaptcha = require('recaptcha').Recaptcha;
-var config = require('../config/application');
-var mail = require('./mail');
 var strftime = require('strftime');
+var config = require('../config/application');
+var mail = require('../service/mail');
+var localUtils = require('../utils/locales');
+
+// show the contact page, just render the contact template 
+// --------------------------------------------------------------------------
+exports.contactPage = function(req, res){
+  res.render('contact', {title: res.locals.lingua.Contact,
+    mainLocale: localUtils.mainLocale(res),
+    altLocale: localUtils.convertLocale(res)
+  });
+};
+
 
 // validate the recaptcha challenge, send the contact data by email
 // ----------------------------------------------------------------
-exports.contact = function(req, res){
-  
+exports.contactAction = function(req, res){
+
   console.log('got contact data ...');
 
   var contactData = req.body;

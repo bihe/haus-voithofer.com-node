@@ -3,12 +3,12 @@
  * Module dependencies.
  */
 
-var express = require('express'), 
-  routes = require('./routes'),
-  appLogic = require('./routes/appLogic'),
-  http = require('http'),
-  lingua = require('lingua'),
-  path = require('path');
+var express = require('express');
+var http = require('http');
+var lingua = require('lingua');
+var path = require('path');
+var routes = require('./routes');
+var config = require('./config/application');
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
+  app.use(express.cookieParser(config.application.secret));
   app.use(express.session());
   app.use(app.router);
   app.use(express.static(path.join(__dirname, 'public')));
@@ -41,15 +41,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-// simple routes, just display the pages
-app.get('/', routes.index);
-app.get('/rooms', routes.rooms);
-app.get('/flat', routes.flat);
-app.get('/location', routes.location);
-app.get('/contact', routes.contact);
-
-// app logic
-app.post('/contact', appLogic.contact);
+routes.setup(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

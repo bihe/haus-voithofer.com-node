@@ -1,24 +1,20 @@
-
 /*
- * GET home page.
+ * define the routes to the handling controllers
+ * index.js created by Henrik Binggl
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: '' });
-};
+var baseController = require('../controller/base');
+var contactController = require('../controller/contact');
 
-exports.rooms = function(req, res){
-  res.render('rooms', { title: '' });
-};
+// setup the routes and delegate logic to the controllers 
+// --------------------------------------------------------------------------
+exports.setup = function(app) {
 
-exports.flat = function(req, res){
-  res.render('flat', { title: '' });
-};
+  app.get('/', baseController.index);
+  app.get('/rooms', baseController.rooms);
+  app.get('/flat', baseController.flat);
+  app.get('/location', baseController.location);
 
-exports.location = function(req, res){
-  res.render('location', { title: '' });
-};
-
-exports.contact = function(req, res){
-  res.render('contact', { title: '' });
+  app.get('/contact', contactController.contactPage);
+  app.post('/contact', contactController.contactAction);
 };

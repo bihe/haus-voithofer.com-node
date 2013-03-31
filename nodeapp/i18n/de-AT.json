@@ -44,11 +44,18 @@
     "Address": "Adresse",
     "Message": "Nachricht",
     "Submit": "Absenden",
+    "sendContactMessage": "Senden Sie uns eine Nachricht",
     "CaptchaMessage": "Geben Sie die Wörter ein",
     "requiredFields": "Bitte füllen Sie alle Felder aus!",
     "wrongCaptcha": "Die eingegebenen Wörter stimmen nicht überein!",
     "Success": "Erfolgreich",
     "ContactDataSent": "Ihre Anfrage wurde erfolgreich gesendet!",
     "notificationError": "Fehler bei der Benachrichtigung, bitte versuchen Sie es später nocheinmal!",
-    "Error": "Ein Fehler ist aufgetreten"
+    "Error": "Ein Fehler ist aufgetreten",
+    "socialFacebook": "Hier clicken um die Seite auf Facebook zu empfehlen.",
+    "socialTwitter": "Hier clicken um die Seite auf Twitter zu empfehlen.",
+    "socialGplus": "Hier clicken um die Seite auf Google+ zu empfehlen.",
+    "Winter": "Winter",
+    "Summer": "Sommer",
+    "Autumn": "Herbst"
 }
