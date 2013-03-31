@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"conver",
+				"convertedLocale"
+			],
+			[
 				"drop",
 				"dropdown-menu"
 			],
@@ -16,9 +20,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"Snippet: file",
+				"Snippet: Header for new files"
+			],
 			[
 				"comm",
 				"Toggle Comment"
@@ -89,12 +101,21 @@
 	},
 	"file_history":
 	[
+		"/E/Development/haus-voithofer.com-node/nodeapp/views/layout.jade",
+		"/E/Development/haus-voithofer.com-node/nodeapp/controller/contact.js",
 		"/E/Development/haus-voithofer.com-node/nodeapp/i18n/de-AT.json",
-		"/E/Development/haus-voithofer.com-node/nodeapp/package.json",
+		"/E/Development/haus-voithofer.com-node/nodeapp/controller/base.js",
+		"/E/Development/haus-voithofer.com-node/nodeapp/utils/locales.js",
+		"/E/Development/haus-voithofer.com-node/nodeapp/routes/index.js",
+		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/index.css",
+		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/socialshareprivacy.css",
+		"/E/Development/haus-voithofer.com-node/nodeapp/app.js",
 		"/E/Development/haus-voithofer.com-node/nodeapp/config/application.js",
+		"/C/Users/henrik/AppData/Roaming/Sublime Text 2/Packages/User/fileHeaderSnippet.sublime-snippet",
+		"/C/Users/henrik/AppData/Roaming/Sublime Text 2/Packages/User/functionHeaderSnippet.sublime-snippet",
+		"/E/Development/haus-voithofer.com-node/nodeapp/package.json",
 		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/bootstrap.overwrite.css",
 		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/styles.css",
-		"/E/Development/haus-voithofer.com-node/nodeapp/public/stylesheets/index.css",
 		"/E/Development/haus-voithofer.com-node/nodeapp/public/javascripts/main.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/public/javascripts/lazyload.min.js",
 		"/C/Users/henrik/Development/haus-voithofer.com-node/nodeapp/views/index.jade",
@@ -126,6 +147,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Locale",
+			"locale",
+			"dummy_image",
+			"url",
+			"url(images",
 			"=",
 			"notification",
 			"url",

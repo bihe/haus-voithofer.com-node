@@ -14,6 +14,7 @@ var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
+  app.set('host', '127.0.0.1');
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
 
@@ -43,6 +44,7 @@ app.configure('development', function(){
 
 routes.setup(app);
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('host'),  function(){
+  console.log('node.js is run in mode ' + process.env.NODE_ENV);
   console.log("Express server listening on port " + app.get('port'));
 });
