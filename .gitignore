@@ -110,3 +110,5 @@ UpgradeLog*.XML
 bootstrap-build/
 
 nodeapp/config/application.js
+.DS_Store
+nodeapp/.DS_Store

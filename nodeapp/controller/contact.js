@@ -7,15 +7,14 @@ var Recaptcha = require('recaptcha').Recaptcha;
 var strftime = require('strftime');
 var config = require('../config/application');
 var mail = require('../service/mail');
-var localUtils = require('../utils/locales');
+var c = require('./common');
 
 // show the contact page, just render the contact template 
 // --------------------------------------------------------------------------
 exports.contactPage = function(req, res){
-  res.render('contact', {title: res.locals.lingua.Contact,
-    mainLocale: localUtils.mainLocale(res),
-    altLocale: localUtils.convertLocale(res)
-  });
+  var result = c.commonVariables(req, res);
+  result.title = res.locals.lingua.Contact;
+  res.render('contact', result);
 };
 
 
