@@ -4,7 +4,7 @@ html(lang='en')
     title= title
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='description', content='')
+    meta(name='description', content='Haus-Voithofer.com')
     meta(name='author', content='Henrik Binggl')
     link(rel='stylesheet', href='./stylesheets/index.css')
 
@@ -31,7 +31,6 @@ html(lang='en')
               span.icon-bar
               span.icon-bar
             
-
             //a(class='brand', href='#')
             //  | Haus Voithofer
             
@@ -60,7 +59,6 @@ html(lang='en')
                     span #{lingua.EN}&nbsp;
                     img(src='./images/en.png',alt='switch language en-US')
         
-
     div#headerimage.carousel
       div.carousel-inner
         div.item.active
@@ -69,7 +67,6 @@ html(lang='en')
             div.carousel-caption
               h1 Haus Voithofer
               p.lead Neukirchen am Gro&szlig;venediger
-
    
     div.container
      
@@ -80,18 +77,18 @@ html(lang='en')
       div#socialshareprivacy.pull-right
 
       footer
-        p &copy; Haus-Voithofer 2013
-
-
+        p 
+          | &copy; Haus-Voithofer 2013 | 
+          span #{version}
     
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-    script(src='./javascripts/bootstrap.js')
+    script(src='./javascripts/bootstrap.js')   
     script
       var i18n = {
         requiredFields: "#{lingua.requiredFields}",
         wrongCaptcha: "#{lingua.wrongCaptcha}",
         notificationError: "#{lingua.notificationError}"
-      };
+      };  
     script(src='./javascripts/main.js')
     script(src='./javascripts/hvapp.js')
     script(src='./javascripts/jquery.socialshareprivacy.min.js')

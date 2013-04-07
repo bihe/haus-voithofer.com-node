@@ -4,6 +4,7 @@
  */
 var localUtils = require('../utils/locales');
 var sites = require('../utils/sites');
+var config = require('../config/application');
 
 // common variables passed by a controller to the view
 // ----------------------------------------------------------------
@@ -26,7 +27,8 @@ exports.commonVariables = function(req, res) {
     mainLocale: localUtils.mainLocale(res),
     altLocale: localUtils.convertLocale(res),
     mode: process.env.NODE_ENV,
-    activeNavigaton: sites.structure(reqPath)
+    activeNavigaton: sites.structure(reqPath),
+    version: config.version.number
   };
   return result;
 };
