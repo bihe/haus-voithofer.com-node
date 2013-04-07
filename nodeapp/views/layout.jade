@@ -39,15 +39,15 @@ html(lang='en')
             
             div.nav-collapse.collapse
               ul.nav
-                li 
+                li(class='#{activeNavigaton.index}')
                   a(href='/') #{lingua.Title}
-                li
+                li(class='#{activeNavigaton.rooms}')
                   a(href='/rooms') #{lingua.Rooms}
-                li
+                li(class='#{activeNavigaton.flat}')
                   a(href='/flat') #{lingua.Flat}
-                li
+                li(class='#{activeNavigaton.location}')
                   a(href='/location') #{lingua.Location}
-                li
+                li(class='#{activeNavigaton.contact}')
                   a(href='/contact') #{lingua.Contact}
 
               ul.nav.pull-right
