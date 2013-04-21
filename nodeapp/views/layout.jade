@@ -6,14 +6,16 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='Haus-Voithofer.com')
     meta(name='author', content='Henrik Binggl')
-    link(rel='stylesheet', href='./stylesheets/index.css')
-
+    if mode == 'production'
+      link(rel='stylesheet', href='./assets/stylesheets/index.min.css')
+    else
+      link(rel='stylesheet', href='./assets/stylesheets/index.css')
     // HTML5 shim, for IE6-8 support of HTML5 elements
     | <!--[if lt IE 9]>  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>  <![endif]-->
 
-    link(rel='shortcut icon', href='./images/favicon.ico')
+    link(rel='shortcut icon', href='./assets/images/favicon.ico')
 
-    script(src='./javascripts/lazyload.min.js')
+    script(src='./assets/js/lazyload.min.js')
   body
 
     // NAVBAR
@@ -53,16 +55,16 @@ html(lang='en')
                 li.small
                    a(href='?l=de-AT') 
                     span #{lingua.DE}&nbsp;
-                    img(src='./images/de.png',alt='switch language de-AT')
+                    img(src='./assets/images/de.png',alt='switch language de-AT')
                 li.small
                   a(href='?l=en-US')
                     span #{lingua.EN}&nbsp;
-                    img(src='./images/en.png',alt='switch language en-US')
+                    img(src='./assets/images/en.png',alt='switch language en-US')
         
     div#headerimage.carousel
       div.carousel-inner
         div.item.active
-          img(src='./images/panorama2_gross.jpg', alt='Neukirchen am Gro&szlig;venediger')
+          img(src='./assets/images/panorama2_gross.jpg', alt='Neukirchen am Gro&szlig;venediger')
           div.container
             div.carousel-caption
               h1 Haus Voithofer
@@ -81,52 +83,17 @@ html(lang='en')
           | &copy; Haus-Voithofer 2013 | 
           span #{version}
     
-    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-    script(src='./javascripts/bootstrap.js')   
+    if mode == 'production'
+      script(data-main='assets/js/require', src='./assets/js/require.js') 
+    else
+      script(data-main='app/config', src='./app/libs/require.js')  
     script
       var i18n = {
         requiredFields: "#{lingua.requiredFields}",
         wrongCaptcha: "#{lingua.wrongCaptcha}",
         notificationError: "#{lingua.notificationError}"
       };  
-    script(src='./javascripts/main.js')
-    script(src='./javascripts/hvapp.js')
-    script(src='./javascripts/jquery.socialshareprivacy.min.js')
-    script
-      jQuery(document).ready(function($){
-        if($('#socialshareprivacy').length > 0){
-          $('#socialshareprivacy').socialSharePrivacy({
-            services : {
-              facebook : {
-                'status' : 'on',
-                'perma_option': 'off',
-                'dummy_img': './images/dummy_facebook_en.png',
-                'txt_info': '#{lingua.socialFacebook}',
-                'language': 'en_US'
-              }, 
-              twitter : {
-                'status' : 'on',
-                'perma_option': 'off',
-                'dummy_img': './images/dummy_twitter.png',
-                'txt_info': '#{lingua.socialTwitter}',
-                'language': 'en'
-              },
-              gplus : {
-                'status' : 'on',
-                'perma_option': 'off',
-                'dummy_img': './images/dummy_gplus.png',
-                'txt_info': '#{lingua.socialGplus}',
-                'language': 'en'
-              }
-            },
-            'cookie_domain': 'www.haus-voithofer.com',
-            'css_path': './stylesheets/socialshareprivacy.css'
-          });
- 
-          $('.settings_info').addClass('hide');
-        }
-      });
-
+    
     if mode == 'production'
       script(src="http://www.google-analytics.com/urchin.js", type="text/javascript")
       script(type="text/javascript") 

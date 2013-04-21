@@ -112,3 +112,5 @@ bootstrap-build/
 nodeapp/config/application.js
 .DS_Store
 nodeapp/.DS_Store
+nodeapp/public/dist/
+nodeapp/public/node_modules/
