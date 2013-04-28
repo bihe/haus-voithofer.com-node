@@ -84,9 +84,9 @@ html(lang='en')
           span #{version}
     
     if mode == 'production'
-      script(data-main='assets/js/require', src='./assets/js/require.js') 
+      script(data-main='assets/js/require', src='./assets/js/require.js?_v=#{version}') 
     else
-      script(data-main='app/config', src='./app/libs/require.js')  
+      script(data-main='app/config', src='./app/libs/require.js?_v=#{version}')  
     script
       var i18n = {
         requiredFields: "#{lingua.requiredFields}",
