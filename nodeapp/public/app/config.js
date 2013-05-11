@@ -13,7 +13,8 @@ require.config({
     underscore: "./libs/underscore-min",
 		Handlebars: "./libs/handlebars-1.0.rc.1.min",
     utils: "./libs/utils",
-    lazyload: "./libs/lazyload.min"
+    lazyload: "./libs/lazyload.min",
+    spin: "./libs/spin.min"
   },
 
   shim: {
@@ -41,6 +42,10 @@ require.config({
       exports: "lazyload"
     },
 
+    spin: {
+      exports: "spin"
+    },
+
     // bootstrap plugin
     "plugins/bootstrap": {
       deps: ["jquery"]
@@ -53,6 +58,11 @@ require.config({
 
     // heise social privacy
     "plugins/jquery.socialshareprivacy.min": {
+      deps: ["jquery"]
+    },
+
+    // spin.js jquery plugin
+    "plugins/jquery.spin":{
       deps: ["jquery"]
     }
   }

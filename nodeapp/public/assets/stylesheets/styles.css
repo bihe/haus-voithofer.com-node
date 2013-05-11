@@ -21,3 +21,15 @@ textarea:required:invalid {
   background-position:right center;
   background-repeat:no-repeat;
 }
+
+.activityindicator {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: none;
+}

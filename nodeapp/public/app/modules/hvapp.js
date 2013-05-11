@@ -4,14 +4,15 @@ define([
 // Third-party libraries.
   "jquery",
   "utils",
-  "Handlebars"
+  "Handlebars",
+  "spin"
 // Modules
   //"modules/searchForm/views"
 ],
 
 // main module of the haus-voithofer.com app
 // ----------------------------------------
-function (app, $, u, Handlebars) {
+function (app, $, u, Handlebars, spin) {
   // the module is called namespace ;)
   var ns = app.module();
 
@@ -27,6 +28,20 @@ function (app, $, u, Handlebars) {
 
   // logic
   // ----------------------------------------
+
+  // display activity
+  // ----------------------------------------
+  function activity(active) {
+    // spinner ?
+    if(active) {
+      $('.activityindicator').show();
+      $('.activityindicator').spin();
+    } else {
+      $('.activityindicator').hide();
+      $('.activityindicator').spin(false);
+    }
+  }
+
 
   // contact data, check the entries and submit the data
   // ---------------------------------------------------
@@ -57,6 +72,9 @@ function (app, $, u, Handlebars) {
       contact.captcha_challenge && contact.captcha_challenge !== '' &&
       contact.captcha_response && contact.captcha_response !== '') {
 
+      activity(true);
+      $('#submitContact').toggleClass('disabled');
+
       $.ajax({
         type: 'POST',
         contentType: 'application/json; charset=utf-8',
@@ -73,11 +91,22 @@ function (app, $, u, Handlebars) {
               $('#email').val('');
               $('#message').val('');
 
+              activity(false);
+              $('#submitContact').toggleClass('disabled');
+
               $('#contactSuccess').removeClass('hide');
             } else {
+
+              activity(false);
+              $('#submitContact').toggleClass('disabled');
+
               $('#contactError').removeClass('hide');
             }
           } else {
+
+            activity(false);
+            $('#submitContact').toggleClass('disabled');
+
             alert(i18n.wrongCaptcha);
           }
           global.Recaptcha.reload();
@@ -88,6 +117,7 @@ function (app, $, u, Handlebars) {
       alert(i18n.requiredFields);
     }
   }
+    
 
   // init the app, mainly event handler
   // this is the only public visible method
