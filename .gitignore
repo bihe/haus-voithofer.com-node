@@ -114,3 +114,5 @@ nodeapp/config/application.js
 nodeapp/.DS_Store
 nodeapp/public/dist/
 nodeapp/public/node_modules/
+
+a.sublime-workspace
