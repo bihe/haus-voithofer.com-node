@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         files: {
           'dist/stylesheets/index.css': [
             'assets/stylesheets/bootstrap.min.css',
-            'assets/stylesheets/bootstrap-responsive.min.css',
+            'assets/stylesheets/bootstrap.responsive.min.css',
             'assets/stylesheets/bootstrap.overwrite.css',
             'assets/stylesheets/styles.css'
             ]
