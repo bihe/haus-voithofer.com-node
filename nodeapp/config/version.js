@@ -1,3 +1,3 @@
 var version = {};
-version.number = 'v1.0.36';
+version.number = 'v1.0.37';
 module.exports = version;
