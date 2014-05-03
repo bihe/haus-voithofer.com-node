@@ -72,7 +72,7 @@
 }
 
 .carousel .item {
-  height: 220px;
+  height: 550px;
 }
 .carousel img {
   position: absolute;
@@ -81,7 +81,7 @@
   /*min-width: 100%;*/
   min-height: 100%;
   max-width: none;
-  /*height: 500px;*/
+  height: 500px;
 }
 
 .carousel-caption {

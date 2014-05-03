@@ -24,6 +24,24 @@ function (app, $, _, Utils, Handlebars, hvapp, social) {
     // ----------------------------------------
     hvapp.init();
 
+    // test
+    $(function () {
+      $('#imageBackground').click(function() {
+        var current_image = $(this).attr('src');
+        var target_image = '';
+	      if ( current_image === './assets/images/panorama-winter.jpg') {
+          target_image = './assets/images/panorama-winter2.jpg';
+        }
+        else if ( current_image === './assets/images/panorama-winter2.jpg') {
+          target_image = './assets/images/panorama-winter3.jpg';
+        }
+        else if ( current_image === './assets/images/panorama-winter3.jpg') {
+          target_image = './assets/images/panorama-winter.jpg';
+        }
+          $(this).attr('src', target_image);
+      });  
+    });
+
     // init the heise provided social privacy plugin
     social.init();
   });
