@@ -1,6 +1,6 @@
 {
   "name": "Haus-Voithofer.com",
-  "version": "1.0.x",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
