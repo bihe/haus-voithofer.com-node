@@ -1,50 +1,141 @@
-
 /**
  * Module dependencies.
  */
 
-var express = require('express');
+'use strict';
+
 var http = require('http');
-var lingua = require('lingua');
+var express = require('express');
 var path = require('path');
-var routes = require('./routes');
-var config = require('./config/application');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var session = require('cookie-session');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var csrf = require('csurf');
+
+var routes = require('./app/routes');
+var config = require('./app/config/application');
 
 var app = express();
+var env = app.get('env') || 'development';
 
-app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
-  app.set('host', '127.0.0.1');
-  app.set('views', __dirname + '/views');
-  app.set('view engine', 'jade');
 
-  // add i18n logic
-  app.use(lingua(app, {
-    defaultLocale: 'de-AT',
-    path: __dirname + '/i18n',
-    storageKey: 'l'
-  }));
+// --------------------------------------------------------------------------
+// Application setup
+// --------------------------------------------------------------------------
 
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.cookieParser(config.application.secret));
-  app.use(express.session());
-  app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+// server settings
+app.set('port', process.env.PORT || 3000);
+app.set('host', process.env.HOST || '127.0.0.1');
+
+// view engine setup
+app.set('views', path.join(__dirname, 'app/views'));
+app.set('view engine', 'jade');
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(session({name: 'mydms', secret: config.application.secret}));
+app.use(flash());
+app.use(cookieParser(config.application.secret));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(csrf());
+app.use(multer({ dest: path.join(__dirname, 'tmp') }));
+
+if(env === 'development') {
+  app.use('/static/', express.static(path.join(__dirname, 'public/app'), {maxAge: '5d'}));
+  app.use(favicon(__dirname + '/public/html5.ico'));
+} else if(env === 'production') {
+  app.use('/static', express.static(path.join(__dirname, 'public/app/dist'), {maxAge: '5d'}));
+  app.use(favicon(__dirname + '/public/dist/html5.ico'));
+}
+app.disable('x-powered-by');
+app.enable('trust proxy');
+
+// view settings
+app.locals.basePath = config.application.basePath;
+
+
+// --------------------------------------------------------------------------
+// CSRF handling with angular
+// --------------------------------------------------------------------------
+
+app.use(function(req, res, next) {
+
+  if(!req.session.currentToken) {
+    var csrfToken = req.csrfToken();
+    res.cookie('XSRF-TOKEN', csrfToken);
+    req.session.currentToken = csrfToken;
+  }
+  next();
 });
 
-// pretty HTML formating for output
-app.locals.pretty = true;
+// --------------------------------------------------------------------------
+// Route handling
+// --------------------------------------------------------------------------
 
-app.configure('development', function(){
-  app.use(express.errorHandler());
+app.use('/', routes);
+
+
+// --------------------------------------------------------------------------
+// Error handling
+// --------------------------------------------------------------------------
+
+// development error handler
+// will print stacktrace
+if (env === 'development') {
+  app.enable('error-stack'); // display the error stack in development
+
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('500', {
+      message: err.message,
+      error: err,
+      title: 'error'
+    });
+  });
+} else {
+  // production error handler
+  // no stacktraces leaked to user
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('500', {
+      message: err.message,
+      error: {},
+      title: 'error'
+    });
+  });
+}
+
+// 404 handler with content type specific results
+app.use(function(req, res, next){
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('html')) {
+    res.render('404', { url: req.url });
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
 });
 
-routes.setup(app);
+// --------------------------------------------------------------------------
+// finally the HTTP server
+// --------------------------------------------------------------------------
 
 http.createServer(app).listen(app.get('port'), app.get('host'),  function(){
-  console.log('node.js is run in mode ' + process.env.NODE_ENV);
-  console.log("Express server listening on port " + app.get('port'));
+  console.log('node.js is run in mode ' + env);
+  console.log('Express listening on ' + app.get('host') + ':' + app.get('port'));
 });
