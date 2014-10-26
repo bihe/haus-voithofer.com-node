@@ -13,13 +13,13 @@
     "csurf": "~1.6.1",
     "express": "~4.8.3",
     "jade": "*",
+    "lingua": "^0.4.0",
     "lodash": "~2.4.1",
     "morgan": "~1.2.2",
-    "q": "~1.0.1",
-    "serve-favicon": "~2.0.1",
-    "strftime": "~0.8.2"
-    "recaptcha": "1.2.0",
     "nodemailer": "0.4.1",
+    "q": "~1.0.1",
+    "recaptcha": "1.2.0",
+    "serve-favicon": "~2.0.1",
     "strftime": "0.5.1"
   },
   "devDependencies": {
@@ -40,10 +40,10 @@
     "grunt-svgmin": "~1.0.0",
     "grunt-usemin": "~2.4.0",
     "load-grunt-tasks": "~0.6.0",
-    "time-grunt": "1.0.0" ,
+    "time-grunt": "1.0.0",
     "nopt": "~3.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
+  }
 }

@@ -68,11 +68,9 @@ a {
     transition: all .1s ease-in-out;
 }
 
-a:hover,
-a:focus {
+a:hover {
     text-decoration: none;
-    color: red !important;
-    border-bottom: 1px dotted red;
+    color: #117CDB !important;
 }
 
 .light {
@@ -102,12 +100,12 @@ a:focus {
 
 .navbar-brand:focus {
     outline: 0;
-    background-color: none;
+    color:#fff;
 }
 
 .navbar-brand:hover {
     outline: 0;
-    background-color: none !important;
+    color:#000;
 }
 
 .navbar-custom a {
@@ -118,7 +116,7 @@ a:focus {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -126,21 +124,22 @@ a:focus {
     outline: 0;
     background: none;
     color: #fff !important;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #117CDB;
 }
 
 .top-nav-collapse .nav li a:hover{
     outline: 0;
     background: none;
-    color: red !important;
+    color: #117CDB !important;
     border-bottom: none !important;
 }
 
 .navbar-custom .nav li.active a {
     outline: 0;
     background: none;
-    color: red !important;
-    border-bottom: none !important;
+    color: #117CDB !important;
+
+    border-bottom: 2px solid #117CDB;
 }
 
 .navbar-toggle {
@@ -167,7 +166,7 @@ a:focus {
         border-bottom: none !important;
     }
     .navbar-custom .nav li a:hover {
-        color: #41dd85 !important;
+        color: #117CDB !important;
     }
     .brand-heading {
         font-size: 36px !important;
@@ -248,7 +247,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: rgba(255,255,255,0.7);
-    background: url(../img/header-bg.jpg) no-repeat center center scroll;
+    background: url(../images/bergstation.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -258,7 +257,8 @@ a:focus {
 
 .intro-body {
     display: table-cell;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    padding-top: 200px;
 }
 
 .brand-heading {
@@ -287,28 +287,6 @@ a:focus {
     .intro-text {
         font-size: 18px;
     }
-}
-
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 35px;
-    font-size: 40px;
-    color: #fff;
-    background: 0 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
 }
 
 .page-scroll .btn-circle i.animated {
