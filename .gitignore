@@ -5,3 +5,4 @@ nodeapp/config/application.js
 nodeapp/public/.grunt
 nodeapp/public/dist/
 nodeapp/public/node_modules/
+nodeapp/public/bower_components/

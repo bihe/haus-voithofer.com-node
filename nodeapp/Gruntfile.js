@@ -14,7 +14,7 @@ module.exports = function (grunt) {
       options: ['last 1 version'],
       dist: {
         files: [{
-          expand: true,ap
+          expand: true,
           cwd: '.tmp/styles/',
           src: '{,*/}*.css',
           dest: '.tmp/styles/'

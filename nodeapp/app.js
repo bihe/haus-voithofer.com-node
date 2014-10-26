@@ -51,11 +51,12 @@ app.use(lingua(app, {
 }));
 
 if(env === 'development') {
-  app.use('/static/', express.static(path.join(__dirname, 'public/app'), {maxAge: '5d'}));
-  app.use(favicon(__dirname + '/public/html5.ico'));
+  app.use('/assets/', express.static(path.join(__dirname, 'public'), {maxAge: '5d'}));
+  app.use(favicon(__dirname + '/public/favicon.ico'));
+  app.locals.pretty = true;
 } else if(env === 'production') {
-  app.use('/static', express.static(path.join(__dirname, 'public/app/dist'), {maxAge: '5d'}));
-  app.use(favicon(__dirname + '/public/dist/html5.ico'));
+  app.use('/assets/', express.static(path.join(__dirname, 'public/dist'), {maxAge: '5d'}));
+  app.use(favicon(__dirname + '/public/dist/favicon.ico'));
 }
 app.disable('x-powered-by');
 app.enable('trust proxy');
