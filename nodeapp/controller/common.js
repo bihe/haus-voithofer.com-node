@@ -2,6 +2,8 @@
  * common logic used by controllers
  * common.js created by Henrik Binggl
  */
+'use strict';
+
 var localUtils = require('../utils/locales');
 var sites = require('../utils/sites');
 var config = require('../config/application');
@@ -27,8 +29,7 @@ exports.commonVariables = function(req, res) {
     mainLocale: localUtils.mainLocale(res),
     altLocale: localUtils.convertLocale(res),
     mode: process.env.NODE_ENV,
-    activeNavigaton: sites.structure(reqPath),
-    version: config.version.number
+    activeNavigaton: sites.structure(reqPath)
   };
   return result;
 };

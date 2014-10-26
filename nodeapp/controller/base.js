@@ -2,6 +2,8 @@
  * basic controller logic to display the different templates
  * base.js created by Henrik Binggl
  */
+'uset strict';
+
 var c = require('./common');
 
 exports.index = function(req, res){

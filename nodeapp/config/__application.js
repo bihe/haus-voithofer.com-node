@@ -1,10 +1,13 @@
 /*
  * application configuration file
  */
+'use strict';
+
 var config = {};
 
 config.application = {};
 config.application.secret = '--SECRET--KEY--';
+config.application.basePath = '/';
 
 // recaptcha section
 config.recaptcha = {};

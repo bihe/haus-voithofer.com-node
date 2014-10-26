@@ -13,9 +13,10 @@ var session = require('cookie-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var csrf = require('csurf');
+var lingua = require('lingua');
 
-var routes = require('./app/routes');
-var config = require('./app/config/application');
+var routes = require('./routes');
+var config = require('./config/application');
 
 var app = express();
 var env = app.get('env') || 'development';
@@ -30,7 +31,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('host', process.env.HOST || '127.0.0.1');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'app/views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
@@ -38,13 +39,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(session({name: 'mydms', secret: config.application.secret}));
-app.use(flash());
+app.use(session({name: 'hvc', secret: config.application.secret}));
 app.use(cookieParser(config.application.secret));
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(csrf());
-app.use(multer({ dest: path.join(__dirname, 'tmp') }));
+
+// add i18n logic
+app.use(lingua(app, {
+  defaultLocale: 'de-AT',
+  path: __dirname + '/i18n',
+  storageKey: 'l'
+}));
 
 if(env === 'development') {
   app.use('/static/', express.static(path.join(__dirname, 'public/app'), {maxAge: '5d'}));
