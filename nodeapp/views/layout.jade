@@ -66,9 +66,13 @@ html(lang='en')
       .section.location-section
         h2 Location
         .divider-grey
-          .row
+        div#cd-google-map.row
+          div#google-container
+          div#cd-zoom-in
+          div#cd-zoom-out
+          address Neudaugasse 243, 5741 Neukirchen am Großvenediger
 
-    section#contact.text-center
+    section#contact.content-section1.text-center
       .section.contact-section
         .row
           p Contact
@@ -83,7 +87,8 @@ html(lang='en')
     | <script src="assets/bower_components/jquery/dist/jquery.js"></script>
     | <script src="assets/bower_components/modernizr/modernizr.js"></script>
     | <script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    | <script src="assets/bower_components/jquery-easing-original/jquery.easing.1.3.js"></script>
     | <script src="assets/scripts/custom.js"></script>
+    | <script src="assets/scripts/map.js"></script>
     | <!-- endbuild -->
-
-    | <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    | <script src="https://maps.googleapis.com/maps/api/js?key=#{mapsApiKey}&sensor=true"></script>

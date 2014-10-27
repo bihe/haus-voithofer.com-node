@@ -63,6 +63,8 @@ app.enable('trust proxy');
 
 // view settings
 app.locals.basePath = config.application.basePath;
+// map settings
+app.locals.mapsApiKey = config.maps.key;
 
 
 // --------------------------------------------------------------------------

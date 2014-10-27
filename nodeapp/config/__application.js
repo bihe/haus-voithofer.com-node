@@ -9,6 +9,10 @@ config.application = {};
 config.application.secret = '--SECRET--KEY--';
 config.application.basePath = '/';
 
+// define the google maps key
+config.maps = {};
+config.maps.key = '--GOOGLE-MAPS-KEY--';
+
 // recaptcha section
 config.recaptcha = {};
 config.recaptcha.public = '--RECAPTCHA--PUBLIC--';
